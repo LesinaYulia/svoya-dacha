@@ -220,6 +220,13 @@
   .tcard svg{width:24px;height:24px;color:var(--forest);margin-bottom:14px;}
   .tcard h3{font-size:16px;font-weight:600;margin-bottom:8px;font-family:var(--ff-body);}
   .tcard p{margin:0;font-size:13.5px;color:var(--ink-dim);line-height:1.5;}
+  .rules-link{
+    display:inline-flex;align-items:center;gap:9px;margin-top:26px;
+    font-size:14.5px;font-weight:600;color:var(--forest);text-decoration:none;
+    border-bottom:1px solid var(--line-strong);padding-bottom:2px;
+  }
+  .rules-link:hover{color:var(--forest-2);border-color:var(--forest);}
+  .rules-link svg{width:19px;height:19px;flex:none;}
 
   /* ---------- Бронирование ---------- */
   .booking{
@@ -306,6 +313,7 @@
       <a href="#dom">О доме</a>
       <a href="#territory">Территория</a>
       <a href="#terms">Условия</a>
+      <a href="pravila.jpg" target="_blank" rel="noopener">Правила</a>
       <a href="#contacts">Контакты</a>
       <a class="nav__cta" href="#contacts">Узнать даты</a>
     </nav>
@@ -373,6 +381,7 @@
           <figure><img src="porch.jpg" alt="Терраса" loading="lazy"></figure>
           <figure><img src="sauna-inside.JPG" alt="Баня изнутри" loading="lazy"></figure>
           <figure><img src="sauna-outside.JPG" alt="Баня снаружи" loading="lazy"></figure>
+          <figure><img src="overview.jpg" alt="Дом и баня — общий вид" loading="lazy"></figure>
         </div>
         <button class="gallery__arrow gallery__arrow--prev" id="galPrev" type="button" aria-label="Предыдущее фото">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m15 18-6-6 6-6"/></svg>
@@ -380,7 +389,7 @@
         <button class="gallery__arrow gallery__arrow--next" id="galNext" type="button" aria-label="Следующее фото">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>
         </button>
-        <div class="gallery__counter" id="galCounter">01 / 08</div>
+        <div class="gallery__counter" id="galCounter">01 / 09</div>
       </div>
       <div class="gallery__thumbs" id="galThumbs">
         <button class="thumb is-active" data-i="0" style="background-image:url('kitchen.jpg')" aria-label="Кухня"></button>
@@ -391,6 +400,7 @@
         <button class="thumb" data-i="5" style="background-image:url('porch.jpg')" aria-label="Терраса"></button>
         <button class="thumb" data-i="6" style="background-image:url('sauna-inside.JPG')" aria-label="Баня изнутри"></button>
         <button class="thumb" data-i="7" style="background-image:url('sauna-outside.JPG')" aria-label="Баня снаружи"></button>
+        <button class="thumb" data-i="8" style="background-image:url('overview.jpg')" aria-label="Дом и баня — общий вид"></button>
       </div>
     </div>
   </div>
@@ -424,7 +434,7 @@
     <div class="territory__copy">
       <p class="kicker">Территория</p>
       <h2>Снаружи — тоже<br>всё для отдыха</h2>
-      <p class="lead">Закрытая территория, парковка, беседка, мангал и место для вечерних посиделок у огня.</p>
+      <p class="lead">Закрытая территория, парковка, беседка, мангал, баня на дровах и место для вечерних посиделок у огня.</p>
       <div class="territory__icons">
         <div class="ticon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 10h18l-2 3H5l-2-3Z"/><path d="M5 13v7M19 13v7M9 13v7M15 13v7"/><path d="M12 3v7M6 6l6-3 6 3"/></svg>
@@ -437,6 +447,10 @@
         <div class="ticon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 3v4M19 3v4M3 5h4M17 5h4M12 12v8M8 20h8"/><circle cx="12" cy="8" r="4"/></svg>
           Костровая зона
+        </div>
+        <div class="ticon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M18 3a3 3 0 0 0-3 3c0 1.7.9 2.4 1.5 3.5S17 12 15 12s-3.5-1.5-3.5-3.5"/><path d="M9 21c-3-2-4-5-2-8 1.2-1.8 3-2 3.5-4"/></svg>
+          Баня на дровах
         </div>
         <div class="ticon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="7" width="18" height="12" rx="2"/><path d="M7 7V5a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v2"/></svg>
@@ -519,6 +533,10 @@
         <p>Личные вещи<br>и уголь для мангала.</p>
       </div>
     </div>
+    <a class="rules-link" href="pravila.jpg" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 3h9l5 5v13a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1Z"/><path d="M9 12h6M9 16h6M9 8h2"/></svg>
+      Полные правила проживания
+    </a>
   </div>
 </section>
 
