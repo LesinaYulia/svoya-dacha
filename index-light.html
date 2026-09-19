@@ -371,15 +371,11 @@
     <div class="dom__gallery">
       <div class="gallery" id="gallery" tabindex="0" role="group" aria-label="Фотографии дома">
         <div class="gallery__track" id="galleryTrack">
-          <figure><img src="kitchen.jpg" alt="Кухня" loading="lazy"></figure>
-          <figure><img src="living-room.jpg" alt="Гостиная" loading="lazy"></figure>
           <figure><img src="bedroom-1.jpg" alt="Спальня № 1" loading="lazy"></figure>
           <figure><img src="bedroom-2.jpg" alt="Спальня № 2" loading="lazy"></figure>
+          <figure><img src="kitchen.jpg" alt="Кухня" loading="lazy"></figure>
+          <figure><img src="sofa.jpg" alt="Гостиная — зона с диваном" loading="lazy"></figure>
           <figure><img src="bathroom.jpg" alt="Санузел" loading="lazy"></figure>
-          <figure><img src="porch.jpg" alt="Терраса" loading="lazy"></figure>
-          <figure><img src="sauna-inside.jpg" alt="Баня изнутри" loading="lazy"></figure>
-          <figure><img src="sauna-outside.jpg" alt="Баня снаружи" loading="lazy"></figure>
-          <figure><img src="overview.jpg" alt="Дом и баня — общий вид" loading="lazy"></figure>
         </div>
         <button class="gallery__arrow gallery__arrow--prev" id="galPrev" type="button" aria-label="Предыдущее фото">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m15 18-6-6 6-6"/></svg>
@@ -387,18 +383,14 @@
         <button class="gallery__arrow gallery__arrow--next" id="galNext" type="button" aria-label="Следующее фото">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>
         </button>
-        <div class="gallery__counter" id="galCounter">01 / 09</div>
+        <div class="gallery__counter" id="galCounter">01 / 05</div>
       </div>
       <div class="gallery__thumbs" id="galThumbs">
-        <button class="thumb is-active" data-i="0" style="background-image:url('kitchen.jpg')" aria-label="Кухня"></button>
-        <button class="thumb" data-i="1" style="background-image:url('living-room.jpg')" aria-label="Гостиная"></button>
-        <button class="thumb" data-i="2" style="background-image:url('bedroom-1.jpg')" aria-label="Спальня № 1"></button>
-        <button class="thumb" data-i="3" style="background-image:url('bedroom-2.jpg')" aria-label="Спальня № 2"></button>
+        <button class="thumb is-active" data-i="0" style="background-image:url('bedroom-1.jpg')" aria-label="Спальня № 1"></button>
+        <button class="thumb" data-i="1" style="background-image:url('bedroom-2.jpg')" aria-label="Спальня № 2"></button>
+        <button class="thumb" data-i="2" style="background-image:url('kitchen.jpg')" aria-label="Кухня"></button>
+        <button class="thumb" data-i="3" style="background-image:url('sofa.jpg')" aria-label="Гостиная — зона с диваном"></button>
         <button class="thumb" data-i="4" style="background-image:url('bathroom.jpg')" aria-label="Санузел"></button>
-        <button class="thumb" data-i="5" style="background-image:url('porch.jpg')" aria-label="Терраса"></button>
-        <button class="thumb" data-i="6" style="background-image:url('sauna-inside.jpg')" aria-label="Баня изнутри"></button>
-        <button class="thumb" data-i="7" style="background-image:url('sauna-outside.jpg')" aria-label="Баня снаружи"></button>
-        <button class="thumb" data-i="8" style="background-image:url('overview.jpg')" aria-label="Дом и баня — общий вид"></button>
       </div>
     </div>
   </div>
@@ -426,12 +418,24 @@
 
 <section class="territory alt" id="territory">
   <div class="wrap territory__grid">
-    <div class="territory__photo">
-      <img src="gazebo.jpg" alt="Беседка с мангалом вечером" loading="lazy">
+    <div class="territory__photo gallery" id="terrGallery" tabindex="0" role="group" aria-label="Фотографии территории">
+      <div class="gallery__track" id="terrGalleryTrack">
+        <figure><img src="sauna-outside.jpg" alt="Баня снаружи" loading="lazy"></figure>
+        <figure><img src="gazebo.jpg" alt="Беседка с мангалом вечером" loading="lazy"></figure>
+        <figure><img src="firepit.jpg" alt="Костровая зона" loading="lazy"></figure>
+        <figure><img src="porch.jpg" alt="Терраса" loading="lazy"></figure>
+      </div>
+      <button class="gallery__arrow gallery__arrow--prev" id="terrPrev" type="button" aria-label="Предыдущее фото">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m15 18-6-6 6-6"/></svg>
+      </button>
+      <button class="gallery__arrow gallery__arrow--next" id="terrNext" type="button" aria-label="Следующее фото">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>
+      </button>
+      <div class="gallery__counter" id="terrCounter">01 / 04</div>
     </div>
     <div class="territory__copy">
       <p class="kicker">Территория</p>
-      <h2>Снаружи — тоже<br>всё для отдыха</h2>
+      <h2>Всё для отдыха</h2>
       <p class="lead">Закрытая территория, парковка, беседка, мангал, баня на дровах и место для вечерних посиделок у огня.</p>
       <div class="territory__icons">
         <div class="ticon">
@@ -587,14 +591,16 @@
 </footer>
 
 <script>
-(function () {
+function initCarousel(opts) {
   "use strict";
-  var track = document.getElementById("galleryTrack");
-  var gallery = document.getElementById("gallery");
-  var prev = document.getElementById("galPrev");
-  var next = document.getElementById("galNext");
-  var counter = document.getElementById("galCounter");
-  var thumbs = Array.prototype.slice.call(document.querySelectorAll("#galThumbs .thumb"));
+  var track = document.getElementById(opts.track);
+  var gallery = document.getElementById(opts.gallery);
+  var prev = document.getElementById(opts.prev);
+  var next = document.getElementById(opts.next);
+  var counter = document.getElementById(opts.counter);
+  var thumbs = opts.thumbs
+    ? Array.prototype.slice.call(document.querySelectorAll(opts.thumbs + " .thumb"))
+    : [];
   var total = track.children.length;
   var target = 0;
   var animating = false;
@@ -657,7 +663,24 @@
   });
 
   render();
-})();
+}
+
+initCarousel({
+  track: "galleryTrack",
+  gallery: "gallery",
+  prev: "galPrev",
+  next: "galNext",
+  counter: "galCounter",
+  thumbs: "#galThumbs"
+});
+
+initCarousel({
+  track: "terrGalleryTrack",
+  gallery: "terrGallery",
+  prev: "terrPrev",
+  next: "terrNext",
+  counter: "terrCounter"
+});
 
 (function () {
   "use strict";
