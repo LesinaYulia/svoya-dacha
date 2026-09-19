@@ -208,11 +208,6 @@
   .cicon svg{width:24px;height:24px;color:var(--forest);}
   .comfort__photo{border-radius:20px;overflow:hidden;box-shadow:0 30px 60px -30px var(--shadow);}
   .comfort__photo img{width:100%;height:420px;object-fit:cover;}
-  .comfort__photo--placeholder{
-    height:420px;display:flex;align-items:center;justify-content:center;text-align:center;
-    background:var(--cream-2);border:1px dashed var(--line-strong);color:var(--ink-faint);
-    font-size:14px;padding:20px;
-  }
 
   /* ---------- Условия ---------- */
   .terms__grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:36px;}
@@ -268,7 +263,7 @@
     .territory__grid{grid-template-columns:1fr;}
     .territory__photo{order:-1;}
     .comfort__grid{grid-template-columns:1fr;}
-    .comfort__photo,.comfort__photo--placeholder{order:-1;height:300px;}
+    .comfort__photo{order:-1;height:300px;}
     .comfort__photo img{height:300px;}
     .terms__grid{grid-template-columns:repeat(2,1fr);}
   }
@@ -326,7 +321,7 @@
   </div>
 </header>
 
-<section class="hero" id="top" style="background-image:url('image-09-09-26-02-42-6.jpeg')">
+<section class="hero" id="top" style="background-image:url('overview.jpg')">
   <div class="hero__scrim"></div>
   <div class="wrap hero__inner">
     <p class="kicker">Загородный дом для отдыха</p>
@@ -501,8 +496,8 @@
         </div>
       </div>
     </div>
-    <div class="comfort__photo--placeholder">
-      <span>Фото деталей<br>скоро добавим</span>
+    <div class="comfort__photo">
+      <img src="lavender.jpg" alt="Лаванда на столе — уют в деталях" loading="lazy">
     </div>
   </div>
 </section>
