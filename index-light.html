@@ -216,8 +216,9 @@
   .tcard svg{width:24px;height:24px;color:var(--forest);margin-bottom:14px;}
   .tcard h3{font-size:16px;font-weight:600;margin-bottom:8px;font-family:var(--ff-body);}
   .tcard p{margin:0;font-size:13.5px;color:var(--ink-dim);line-height:1.5;}
+  .rules-links{display:flex;gap:32px;flex-wrap:wrap;margin-top:26px;}
   .rules-link{
-    display:inline-flex;align-items:center;gap:9px;margin-top:26px;
+    display:inline-flex;align-items:center;gap:9px;
     font-size:14.5px;font-weight:600;color:var(--forest);text-decoration:none;
     border-bottom:1px solid var(--line-strong);padding-bottom:2px;
   }
@@ -309,6 +310,7 @@
       <a href="#dom">О доме</a>
       <a href="#territory">Территория</a>
       <a href="#terms">Условия</a>
+      <a href="stoimost.jpg" target="_blank" rel="noopener">Стоимость</a>
       <a href="pravila.jpg" target="_blank" rel="noopener">Правила</a>
       <a href="#contacts">Контакты</a>
       <a class="nav__cta" href="#contacts">Узнать даты</a>
@@ -529,10 +531,16 @@
         <p>Личные вещи<br>и уголь для мангала.</p>
       </div>
     </div>
-    <a class="rules-link" href="pravila.jpg" target="_blank" rel="noopener">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 3h9l5 5v13a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1Z"/><path d="M9 12h6M9 16h6M9 8h2"/></svg>
-      Полные правила проживания
-    </a>
+    <div class="rules-links">
+      <a class="rules-link" href="stoimost.jpg" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3v18M8 7.5c0-1.4 1.8-2.5 4-2.5s4 1.1 4 2.5-1.8 2.5-4 2.5-4 1.1-4 2.5 1.8 2.5 4 2.5 4-1.1 4-2.5"/></svg>
+        Стоимость проживания
+      </a>
+      <a class="rules-link" href="pravila.jpg" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 3h9l5 5v13a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1Z"/><path d="M9 12h6M9 16h6M9 8h2"/></svg>
+        Полные правила проживания
+      </a>
+    </div>
   </div>
 </section>
 
