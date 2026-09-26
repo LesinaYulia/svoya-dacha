@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /index-dark.html
+
+Sitemap: https://lesinayulia.github.io/svoya-dacha/sitemap.xml
